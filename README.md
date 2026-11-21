@@ -17,3 +17,10 @@ Reusable CI/CD pipeline definitions for the food platform repositories.
 - Credentials are managed by Jenkins and must never be committed.
 
 Pipeline and rollback procedures are documented in `devops-engineering-docs`.
+
+## Included pipelines
+
+- `pipelines/food-backend.Jenkinsfile` — installs with Bun, type-checks, and runs backend tests with an in-memory database.
+- `pipelines/food-frontend.Jenkinsfile` — installs with Bun, type-checks, runs Vitest coverage, and builds the Vite application.
+
+Both application repositories also contain a root `Jenkinsfile` so Jenkins Multibranch Pipeline jobs can discover them directly.
